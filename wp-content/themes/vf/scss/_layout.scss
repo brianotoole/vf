@@ -460,7 +460,7 @@ Homepage
     .img {
          position: absolute;
          width: 100%;
-         height: 500px;
+         height: 100%;
          z-index: 1;    
 	}
     
@@ -471,8 +471,8 @@ Homepage
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-image: ease-in-out-gradient(to bottom right,white,$blue);
-		opacity: 0.2; //lesser opacity = lesser gradient overlay
+		background-image: linear-gradient(to bottom right,$blue,white);
+		opacity: 0.6; //lesser opacity = lesser gradient overlay
 		z-index: 2;
     }
     
