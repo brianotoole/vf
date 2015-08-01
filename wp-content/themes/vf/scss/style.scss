@@ -1,0 +1,27 @@
+// Colors
+
+$blue: #0c436a;
+$darkgreen: #219c75; 
+$lightgreen: #73bd4a;
+$gray: #555;
+$lightgray: #ccc;
+$smoke: #f9f6f1;
+$black: #242121;
+$twitter: #55acee;
+$facebook: #405d9a;
+$gplus: #dd4b39;
+
+// Typography
+$font-heading: 'Lato', serif, Arial;
+//$font-body: 'Merriweather', serif, Arial;
+$font-body: 'Francois One', serif, Arial;
+
+// Vendors
+@import "vendor/reset";
+@import "vendor/bootstrap.grid";
+@import "vendor/font-awesome";
+
+// Layout
+@import "wp";
+@import "layout";
+@import "responsive";
