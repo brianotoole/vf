@@ -1,7 +1,8 @@
 #ignored files
 .htaccess
 .DS_Store
-wp-content/.sass-cache/
+style.css.map
+.sass-cache/
 wp-config.php
 wp-content/uploads/
 wp-content/blogs.dir/

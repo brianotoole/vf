@@ -511,7 +511,7 @@ Homepage
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
-    background: $blue;
+    background: $darkgreen;
     
     .intro {
 	    background: transparent;
@@ -736,6 +736,7 @@ body:not(.page-template-page-home) {
 
 	.page-title {
 		color: $darkgreen;
+		padding-bottom: 30px;
 	}
 	
 	p {
@@ -779,7 +780,7 @@ Sidebar
 	
 	select,input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
     	margin: 10px 15px 0px 15px;
-    	width: 92%;
+    	width: 90%;
 	}	
 }
 
@@ -866,7 +867,7 @@ Footer
 	font-weight: 400;
 }
 .footer-contact {
-	padding: 50px 0 80px;
+	padding: 80px 0;
 	text-align: center;
 	background: $blue;
 	color: white;
@@ -879,6 +880,7 @@ Footer
 		margin-bottom: 60px;
 	}
 	 .button {
+	 	width: 260px;
 		margin: 20px auto;
 	}
 
