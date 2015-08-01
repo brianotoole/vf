@@ -62,6 +62,13 @@
 			clip-path: polygon(22% 0, 100% 0, 100% 100%, 16% 100%);
 	    }
 	}
+	body:not(.page-template-page-home) {
+		background: linear-gradient(left, $blue 20%, white 20%);
+		background: -webkit-linear-gradient(left, $blue 20%, white 20%);
+		background: -moz-linear-gradient(left, $blue 20%, white 20%);
+		background: -ms-linear-gradient(left, $blue 20%, white 20%);
+		background: -o-linear-gradient(left, $blue 20%, white 20%);
+	}
 	.b-right {
 	  	border-right: 1px solid $gray;
 	}
@@ -100,6 +107,7 @@
 		    margin: 5px 125px 5px 20px;
 	     }
 	}
+	#secondary { padding: 0 20px 0 0;}
 }
 
 
@@ -147,7 +155,8 @@ h6 { font-size: 16px; line-height: 20px; font-weight: 600; text-transform: upper
 		
 	}
 	.entry-header {
-		min-height: 200px;
+		height: 110px;
+		min-height: 110px;
 	}
 	
 	.sec1 {

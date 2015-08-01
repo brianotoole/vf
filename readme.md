@@ -20,5 +20,5 @@ Making site responsive + new homepage and an overall cleaner design
   
   `sass--watch scss/style.scss:css/style.css --style compressed`
   
-3. That's it.
+3. That's it
 
