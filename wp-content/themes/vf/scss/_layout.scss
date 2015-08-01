@@ -891,7 +891,7 @@ Footer
 
 .site-footer {
 	font-weight: 400;
-	background: darken($blue,2%);
+	background: $blue;
 	border-top: 1px solid lighten($blue,2%);
 	padding: 20px 0 40px;
 	color: white;

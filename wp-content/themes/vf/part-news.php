@@ -29,16 +29,3 @@
  else : ?>
 <p><?php _e( 'There are no news articles at this time.' ); ?></p>
 <?php endif; ?>
- 
-<?php if(is_front_page() ) { //if homepage & >= 3 posts, show "view more articles" button ?>	
-  <?php 
-    $count_posts = wp_count_posts();
-    $published_posts = $count_posts->publish;
-      if( $published_posts >= 3 ) {
-        echo '<div class="col-sm-12 text-center no-padding">';
-        echo '<a href="' . get_option('home') . '/news" class="button transparent">' . 'View More Articles' . '</a>';
-        echo '</div>'; 
-      }
-  ?>
-<?php } else { ?>
-<?php } ?>
