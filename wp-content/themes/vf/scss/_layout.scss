@@ -720,17 +720,8 @@ Interior
     height: 100%;
     min-height: 190px;
     &:after {
-    	content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin-left: 300px;
-		background-color: white;
-		-webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 16% 100%);
-		clip-path: polygon(22% 0, 100% 0, 100% 100%, 16% 100%);
-    }
+	    //responsive.scss for clip-path
+	}
 }
 
 body:not(.page-template-page-home) {
@@ -762,6 +753,7 @@ body:not(.page-template-page-home) {
 .hentry {
 	margin: 0;
 }
+#primary {padding: 0;}
 /*--------------------------------------------------------------
 Sidebar
 --------------------------------------------------------------*/
