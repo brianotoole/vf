@@ -1,4 +1,3 @@
-<div class="events">
 <a href="<?php the_permalink() ?>" title="Click to View: <?php the_title_attribute(); ?>"> 
 <div class="col-sm-12 no-padding">
 	<div class="col-sm-2 no-padding img">
@@ -24,16 +23,5 @@
       <?php endif; ?></em></p>  
 	  <p><?php the_excerpt() ?></p>
 	</div>
-	<a href="<?php the_permalink() ?>" title="Click to View: <?php the_title_attribute(); ?>">
-	  <div class="col-sm-2 no-padding pull-right">
-		<div class="more">
-	      <p class="view">View Event</p>
-	    </div>
-	  </div>
 	<div class="clear"></div>
-	<hr>
-</div>
 </a>
-
-
-</div><!--/.events-->

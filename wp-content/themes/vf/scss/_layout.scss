@@ -741,6 +741,10 @@ Interior
 	background-size: cover;
 }
 .entry-content {
+
+	.page-title {
+		color: $darkgreen;
+	}
 	
 	p {
 		padding: 2px 0px 25px;
