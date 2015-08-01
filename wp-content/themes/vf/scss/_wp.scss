@@ -131,10 +131,6 @@ Posts and pages
 	display: block;
 }
 
-.hentry {
-	margin: 0 0 1.5em;
-}
-
 .byline,
 .updated:not(.published) {
 	display: none;
@@ -145,34 +141,11 @@ Posts and pages
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
 
-.content-area {
-	padding-bottom: 10px;
-	width: 100%;
-}
-
-.blog-archive {
-	padding-top: 20px;
-}
-.blog-entry-header {
-	background: $blue;
-	padding: 150px 0 150px;
-}
-.blog-featured-img-header {
-	padding: 150px 15px 150px;
-    position: relative; 
-	background-size: cover !important;
-}
 .blog-entry-header .entry-title, .blog-featured-img-header .entry-title {
 	font-size: 50px;
 	line-height: 54px;

@@ -314,6 +314,7 @@ Menus
 	
 		}
 		
+		
 		&:last-child { //volunteer link
 			border: 2px solid white;
 			text-transform: uppercase;
@@ -441,7 +442,10 @@ Content
 
 
 /*--------------------------------------------------------------
-Page Headers
+Page Templates
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Homepage
 --------------------------------------------------------------*/
 .hero {
 	position: relative;
@@ -491,33 +495,6 @@ Page Headers
 }//.hero
 
 
-/* interior page headers */
-.entry-header {
-	position: relative;
-	background-color: $gray;
-	//background: url('') bottom center no-repeat fixed;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    min-height: 300px;
-    &:before {
-    	content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: ease-in-out-gradient(to bottom right,white,$blue);
-		opacity: .7; //less opacity = less gradient overlay
-    }
-}
-
-/*--------------------------------------------------------------
-Page Templates
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-Homepage
---------------------------------------------------------------*/
 .intro { //used inside all sections
 	background: transparent;
     max-width: 88%;
@@ -735,12 +712,39 @@ Homepage
 /*--------------------------------------------------------------
 Interior
 --------------------------------------------------------------*/
-.featured-img-header {
-	padding: 250px 0 100px;
-    position: relative; 
-	background-size: cover;
+/* interior page header */
+.entry-header {
+	position: relative;
+	background-color: $blue;
+    width: 100%;
+    height: 100%;
+    min-height: 190px;
+    &:after {
+    	content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin-left: 300px;
+		background-color: white;
+		-webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 16% 100%);
+		clip-path: polygon(22% 0, 100% 0, 100% 100%, 16% 100%);
+    }
+}
+
+body.page:not(.page-template-page-home) {
+	background: linear-gradient(left, $blue 20%, white 20%);
+	background: -webkit-linear-gradient(left, $blue 20%, white 20%);
+	background: -moz-linear-gradient(left, $blue 20%, white 20%);
+	background: -ms-linear-gradient(left, $blue 20%, white 20%);
+	background: -o-linear-gradient(left, $blue 20%, white 20%);
 }
 .entry-content {
+	background: $smoke;
+	margin-top: 0;
+	min-height: 800px;
+	padding: 60px 20px 40px;
 
 	.page-title {
 		color: $darkgreen;
@@ -753,6 +757,9 @@ Interior
 	a {
 		text-decoration: underline;
 	}
+}
+.hentry {
+	margin: 0;
 }
 /*--------------------------------------------------------------
 Single / Archives / Cat / Post Types

@@ -5,7 +5,7 @@
 <?php } ?>
   <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-<a href="<?php the_permalink() ?>" title="Click to Read: <?php the_title_attribute(); ?>">  
+<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">  
 <div class="article col-sm-12 no-padding">
 	<div class="col-sm-2 no-padding img">
 	  <?php if (has_post_thumbnail( $post->ID ) ): //if featured image is uploaded... ?>

@@ -15,6 +15,10 @@
 				'after'  => '</div>',
 			) );
 		?>
+		<?php if (is_page('news')) { ?>
+			<?php get_template_part( 'part', 'news' ); ?>
+		<?php } else { ?>
+		<?php } ?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->

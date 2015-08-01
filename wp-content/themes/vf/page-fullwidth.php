@@ -8,7 +8,7 @@ get_header(); ?>
     <header class="entry-header">
     </header><!-- .entry-header -->
         
-	<div class="grid grid-pad">
+	<div class="grid">
 		<div id="primary" class="content-area col-1-1">
 			<main id="main" class="site-main" role="main">
 
