@@ -6,7 +6,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-		<?php the_title('<h2 class="page-title animate fadeIn">'); ?>
+		<h2 class="page-title animate fadeIn"><?php the_title(); ?></h2>
 		
 		<?php the_content('<p>'); ?>
 		<?php

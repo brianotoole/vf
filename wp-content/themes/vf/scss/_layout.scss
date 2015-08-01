@@ -733,7 +733,7 @@ Interior
     }
 }
 
-body.page:not(.page-template-page-home) {
+body:not(.page-template-page-home) {
 	background: linear-gradient(left, $blue 20%, white 20%);
 	background: -webkit-linear-gradient(left, $blue 20%, white 20%);
 	background: -moz-linear-gradient(left, $blue 20%, white 20%);
@@ -751,7 +751,8 @@ body.page:not(.page-template-page-home) {
 	}
 	
 	p {
-		padding: 2px 0px 25px;
+		padding: 10px 0;
+		color: $black;
 	}
 	p a,
 	a {
@@ -762,71 +763,55 @@ body.page:not(.page-template-page-home) {
 	margin: 0;
 }
 /*--------------------------------------------------------------
-Single / Archives / Cat / Post Types
+Sidebar
 --------------------------------------------------------------*/
 /*sidebar*/
 #secondary {
 	color: $black;
 }
-.single-blog-entry-header {
-	background: #F4F4F4;
-	padding: 30px 10px 20px;
-	color: $black;
-	border-top: 1px solid $lightgray;
-	border-bottom: 1px solid $lightgray;
-	text-align: center;
-}
-/*--------------------------------------------------------------
-Share Buttons
---------------------------------------------------------------*/
-.event-link {
-	margin-bottom: 30px;
-    border-bottom: 1px solid $gray;
-    padding-bottom: 25px;
-	
-	a {
-		display: block;
-		width: 100%;
-		margin: 0 auto 10px;
-		padding: 12px 5px;
+.sidebar {
+
+	.widget-title {
+		padding: 10px 15px;
+		background: $darkgreen;
 		color: white;
 		font-size: 1.25em;
-		text-align: center;
-		text-decoration: none;
-		background: $blue;
-		border: 2px solid white;
+		text-transform: uppercase;
 		&:before {
-			content: '\f044';
-			font-family: fontAwesome;
-			font-size: 1em;
-			color: white;
-			padding-right: 10px;
+			content: '';
+			position: absolute;
+			margin-left: -40px;
+			color: $darkgreen;
+			-webkit-clip-path: polygon(0 50%, 100% 100%, 100% 0);
+			clip-path: polygon(0 50%, 100% 100%, 100% 0);
+			z-index: 9999;
 		}
-		&:hover {
-			background: $black;
-		}
-		
 	}
 	
+	select,input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
+    	margin: 10px 15px 0px 15px;
+    	width: 92%;
+	}	
 }
 
 aside {
 	li.cat-item {
-
 	    a {
 	    	display: block;
 	        width: 100%;
-	        margin: 0 auto 10px;
-	        padding: 5px;
-	        border-bottom: 1px solid $gray;
-	        font-size: 1.25em;
+	        padding: 1px 30px;
+	        font-size: 1em;
 	        text-align: left;
 	        text-decoration: none;
 		    color: $blue;
 	    }
 		&:hover {
-			color: $black;
-			text-decoration: underline;
+			color: darken($blue,7%);
+		}
+		&:before {
+			content: url('img/arrow.png') 0 0 no-repeat;
+			position: absolute;
+			margin-left: 15px;
 		}
     }
 }
@@ -983,6 +968,6 @@ Animations
 
 /* durations */
 .animate {
-  	-webkit-animation-duration: 0.75s;
-  	animation-duration: 0.75s;
+  	-webkit-animation-duration: 0.50s;
+  	animation-duration: 0.50s;
 }

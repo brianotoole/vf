@@ -1,4 +1,7 @@
-<a href="<?php the_permalink() ?>" title="Click to View: <?php the_title_attribute(); ?>"> 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<div class="entry-content">
+<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"> 
 <div class="col-sm-12 no-padding">
 	<div class="col-sm-2 no-padding img">
 	  <?php if (has_post_thumbnail( $post->ID ) ): //if featured image is uploaded... ?>

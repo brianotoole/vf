@@ -4,11 +4,11 @@ Template Name: Page - Sidebar
  */
 get_header(); ?> 
             
-        <header class="entry-header">
-		</header><!-- .entry-header -->
+	<header class="entry-header">
+	</header><!-- .entry-header -->
 
 	<div class="grid">
-		<div id="primary" class="content-area col-9-12">
+		<div id="primary" class="col-9-12">
 			<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

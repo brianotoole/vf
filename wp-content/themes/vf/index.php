@@ -4,21 +4,11 @@
  */
 get_header(); ?>
         
-		<div class="sec1">
-			<div class="intro" id="contain">
-			<h3 class="h-title"><span><?php the_title(); ?></span></h3> 
-				<?php if( get_field('interior_callout') ): //if field is entered...?>
-				 <p class="intro"><?php the_field('interior_callout'); ?></p>
-				<?php else: //no field is entered...?> 
-				<p class="intro-no-p"></p>
-				<?php endif; ?>
-			</div><!--/.intro-->
-		</div><!--/.sec1-->
-        
+	<header class="entry-header">
+    </header><!-- .entry-header -->
     
-	  <div class="sec3">
-   		 <div class="grid grid-pad no-top">
-			<div id="primary" class="content-area col-9-12 blog-archive">
+   	<div class="grid">
+			<div id="primary" class="col-9-12">
 				<main id="main" class="site-main" role="main">
 
 				<?php if ( have_posts() ) : ?>
@@ -47,7 +37,6 @@ get_header(); ?>
 				</main><!-- #main -->
 			</div><!-- #primary -->
 		</div><!-- grid -->
-     </div><!--.sec3-->
 
 	<?php get_sidebar(); ?>
 	</div><!-- grid -->
