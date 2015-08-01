@@ -7,7 +7,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-body;
+	font-family: $font-heading;
+	font-weight: 400;
 }
 h1 { font-size: 42px; line-height: 40px; }
 h2 { font-size: 38px; line-height: 36px; }
@@ -30,7 +31,7 @@ select,
 textarea {
 	color: $black;
 	font-weight: 300;
-	font-family: $font-heading;
+	font-family: $font-body;
 	font-size: 15px;
 	line-height: 1.8;
 }
@@ -79,6 +80,7 @@ input[type="submit"] {
 	font-size: 1.2em;
 	line-height: 1;
 	font-weight: inherit;
+	font-family: $font-heading;
 	padding: 1em;
 	text-shadow: none;
 	text-transform: uppercase;
@@ -177,6 +179,7 @@ textarea {
     height: 60px;
     line-height: 60px;
     text-align: center;
+    font-family: $font-heading;
     font-size: 1.1em;
     font-weight: normal;
     font-style: normal;
@@ -460,8 +463,7 @@ Homepage
     .img {
          position: absolute;
          width: 100%;
-         height: 100%;
-         z-index: 1;    
+         height: 100%;   
 	}
     
     &:before {
@@ -471,23 +473,22 @@ Homepage
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-image: linear-gradient(to bottom right,$blue,white);
+		background-image: linear-gradient(to bottom right,$yellow,white);
 		opacity: 0.6; //lesser opacity = lesser gradient overlay
 		z-index: 2;
     }
     
     h2,
     p {
+    	position: relative;
+    	z-index: 3; //on top of img gradient
 	    color: $blue;
     }
     
     h2 {
-	    position: relative;
+    	margin-top: 250px;
 		font-family: $font-heading;
-	    font-weight: 200;
 		color: $blue;
-		margin-top: 250px;
-		z-index: 3; //on top of gradient
     }
     
 
@@ -673,7 +674,7 @@ Homepage
 	
 	p {
 		color: $black;
-		font-size: 1.2em;
+		font-size: 1em;
 		padding-right: 5px;
 	}
 	
@@ -725,11 +726,7 @@ Interior
 }
 
 body:not(.page-template-page-home) {
-	background: linear-gradient(left, $blue 20%, white 20%);
-	background: -webkit-linear-gradient(left, $blue 20%, white 20%);
-	background: -moz-linear-gradient(left, $blue 20%, white 20%);
-	background: -ms-linear-gradient(left, $blue 20%, white 20%);
-	background: -o-linear-gradient(left, $blue 20%, white 20%);
+	background: white;
 }
 .entry-content {
 	background: $smoke;
