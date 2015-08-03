@@ -8,30 +8,26 @@ get_header(); ?>
 <META NAME="ROBOTS" CONTENT="INDEX, NOFOLLOW">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-		<div class="sec1">
-			<div class="intro" id="contain">
-			<h3 class="h-title"><span>This Page Does Not Exist - 404</span></h3> 
-				 <p class="intro-no-p"></p>
-			</div><!--/.intro-->
-		</div><!--/.sec1-->
-        
-	<div class="grid grid-pad">
-		<div id="primary" class="content-area col-1-1">
+	<header class="entry-header">
+	</header><!-- .entry-header -->
+
+	<div class="grid">
+		<div id="primary" class="col-9-12">
 			<main id="main" class="site-main" role="main">
-			<div class="entry-content text-center">
-				<p>Please <a href="<?php bloginfo('url'); ?>">click here to return to the homepage</a>.</p>
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-			</div>
+	
+				<article id="post">
+	
+					<div class="entry-content">
+						<h2 class="page-title animate fadeIn">Page Not Found: 404</h2>
+						<hp>This page does not exist or has been deleted.</hp>
+						<p><a href="<?php bloginfo('url'); ?>">Click here to return to the homepage</a>.</p>
+					</div><!-- .entry-content -->
+				
+				</article><!-- #post-## -->
 
 			</main><!-- #main -->
 		</div><!-- #primary -->
-	</div><!-- grid -->
-<?php get_footer(); ?>
 
+	<?php get_sidebar(); ?>
+	</div><!-- grid -->
+	<?php get_footer(); ?>

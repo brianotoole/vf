@@ -475,10 +475,12 @@ Homepage
     	position: relative;
     	z-index: 3; //on top of img gradient
 	    color: $blue;
+	    text-transform: none;
     }
     
     h2 {
     	margin-top: 250px;
+    	line-height: 1;
 		font-family: $font-heading;
 		color: $blue;
     }
