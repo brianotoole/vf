@@ -33,8 +33,10 @@
 		top: 40px;
 		left: 30px;
 	}
-	.help-you .button {
-		font-size: 0.9em;
+	.help-you {
+		.button {
+			font-size: 0.9em;
+		}
 	}
 }//end
 /* special considerations */
@@ -110,6 +112,11 @@
 		    margin: 5px 125px 5px 20px;
 	     }
 	}
+	.help-you{ 
+		p {
+		    padding-right: 30px;
+		}
+	}
 	#secondary { padding: 0 20px 0 0;}
 }
 
@@ -123,7 +130,13 @@ h3 { font-size: 22px; line-height: 32px; }
 h4 { font-size: 18px; line-height: 28px; }
 h5 { font-size: 18px; line-height: 24px; }
 h6 { font-size: 16px; line-height: 20px; font-weight: 600; text-transform: uppercase; }
-.button { display: block; width: 100%; }
+.button, 
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { 
+	display: block; width: 100%; 
+}
 	//nav
 	.menu-toggle {
 		display: block;
@@ -132,8 +145,10 @@ h6 { font-size: 16px; line-height: 20px; font-weight: 600; text-transform: upper
 		background: none;
 		border: none;
 		color: white;
-		padding: 30px 20px;
+		margin: -12px 0;
+		padding: 35px 20px;
 		&:hover, &:focus {
+			background: transparent;
 			color: white;
 			border: 0;
 		}
@@ -142,21 +157,22 @@ h6 { font-size: 16px; line-height: 20px; font-weight: 600; text-transform: upper
 		display: none;
 	}
 	.site-header {
-		top: 20px;
+		top: 22px;
 	}
 	
-	.site-logo img { max-width: 80%; }
+	.site-logo img { max-width: 70%; }
 	
 	.hero {
+
 		&:before {
-			background-image: none;
+			margin-top: 110px; //#1
 		}
 		.img {
-			height: 110px;
+			height: 110px; //keep same dimension as #1
 			background: $blue!important;
 		}
 		h2 {
-			margin-top: 110px;
+			margin-top: 110px; //keep same dimension as #1
 		}
 		
 	}

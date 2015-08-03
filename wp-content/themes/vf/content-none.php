@@ -4,26 +4,26 @@
  */
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'vf' ); ?></h1>
-	</header><!-- .page-header -->
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="page-content">
+	<div class="entry-content">
+		<h2 class="page-title animate fadeIn"><?php _e( 'No Matched Search Results', 'vf' ); ?></h2>
+		
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+	
+				<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'vf' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+	
+			<?php elseif ( is_search() ) : ?>
+	
+				<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'vf' ); ?></p>
+				<?php get_search_form(); ?>
+	
+			<?php else : ?>
+	
+				<p><?php _e( 'Nothing was found for your search terms. Please try your search again with some different keywords.', 'vf' ); ?></p>
+				<?php get_search_form(); ?>
+	
+			<?php endif; ?>
+	</div><!-- .entry-content -->
 
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'vf' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
-
-		<?php elseif ( is_search() ) : ?>
-
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'vf' ); ?></p>
-			<?php get_search_form(); ?>
-
-		<?php else : ?>
-
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'vf' ); ?></p>
-			<?php get_search_form(); ?>
-
-		<?php endif; ?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+</article><!-- #post-## -->
