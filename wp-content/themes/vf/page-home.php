@@ -27,17 +27,17 @@ get_header(); ?>
 		<div class="col-sm-4">
 			<img src="http://placeimg.com/150/150/any">
 			<h3>Americorps</h3>
-			<p>Americorps members dedicate a year of their life to service in Florida. We make it happen.</p>
+			<p><?php the_field('home_wwd_left'); ?></p>
 		</div><hr class="visible-xs">
 		<div class="col-sm-4">
 			<img src="http://placeimg.com/150/150/any">
 			<h3>Florida<br />Volunteers</h3>
-			<p>Americorps members dedicate a year of their life to service in Florida. We make it happen.</p>
+			<p><?php the_field('home_wwd_middle'); ?></p>
 		</div><hr class="visible-xs">
 		<div class="col-sm-4">
 			<img src="http://placeimg.com/150/150/any">
 			<h3>Emergency<br />Management</h3>
-			<p>Americorps members dedicate a year of their life to service in Florida. We make it happen.</p>
+			<p><?php the_field('home_wwd_right'); ?></p>
 		</div>
 	</div><!--/.intro-->
 </section><!--/.what-we-do-->
@@ -57,25 +57,19 @@ get_header(); ?>
 			<img src="http://placeimg.com/475/500/any">
 		</div>
 		<div class="col-sm-8">
-			<p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."</p>
+			<p>"<?php the_field('home_quote_text1'); ?>"</p>
 			<p>
-			  <strong>Quote Name</strong> / 
-			  <span>Quote Position</span> / 
-			  <span>Quote Company</span>
+			  <strong><?php the_field('home_quote_attr1'); ?></strong>
 			</p><hr>
 			
-			<p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."</p>
+			<p>"<?php the_field('home_quote_text2'); ?>"</p>
 			<p>
-			  <strong>Quote Name</strong> / 
-			  <span>Quote Position</span> / 
-			  <span>Quote Company</span>
+			  <strong><?php the_field('home_quote_attr2'); ?></strong>
 			</p><hr>
 			
-			<p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."</p>
+			<p>"<?php the_field('home_quote_text3'); ?>"</p>
 			<p>
-			  <strong>Quote Name</strong> / 
-			  <span>Quote Position</span> / 
-			  <span>Quote Company</span>
+			  <strong><?php the_field('home_quote_attr3'); ?></strong>
 			</p>
 		</div>
 	</div><!--/.intro-->
@@ -85,9 +79,7 @@ get_header(); ?>
 	<div class="intro row" id="contain">
 	  <h2 class="section-title">How Can We Help You?</h2> 
 		<div class="col-sm-8">
-		  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-		  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-		  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+		  <p><?php the_field('home_help_text'); ?></p>
 		</div>
 		<div class="col-sm-4">
 			<a class="button blue full" href="#">I Want to Volunteer</a>

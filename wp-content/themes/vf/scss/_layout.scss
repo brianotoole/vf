@@ -9,6 +9,8 @@ h5,
 h6 {
 	font-family: $font-heading;
 	font-weight: 400;
+	color: $blue;
+	text-transform: uppercase;
 }
 h1 { font-size: 42px; line-height: 40px; }
 h2 { font-size: 38px; line-height: 36px; }
@@ -36,20 +38,6 @@ textarea {
 	line-height: 1.8;
 }
 textarea { height: 200px; }
-a {
-	color: $black;
-	-webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: darken($black,7%);
-}
 
 /*--------------------------------------------------------------
 Buttons, Inputs, Forms
@@ -69,13 +57,16 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 2px solid;
-	border-color: $gray;
+	border: none;
+	border-color: transparent;
 	border-radius: 0;
-	background: white;
+	background: $blue;
 	box-shadow: none;
-	color: $gray;
+	color: white;
 	cursor: pointer;
+	margin: 20px 0px;
+	float: right;
+	width: 260px;
 	-webkit-appearance: button; 
 	font-size: 1.2em;
 	line-height: 1;
@@ -84,10 +75,15 @@ input[type="submit"] {
 	padding: 1em;
 	text-shadow: none;
 	text-transform: uppercase;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 	
 	&:hover, &:focus, &:active {
-		border-color: darken($gray,20%);
-		color: darken($gray,20%);
+		color: darken(white,20%);
+		background: darken($blue,20%);
 	}
 	
 }
@@ -307,10 +303,10 @@ Menus
 			color: $darkgreen;
 			font-weight: 400;
 			font-size: 1.1em;
-			transition: all 0.4s ease-in-out;
-			-moz-transition: all 0.4s ease-in-out;
-			-webkit-transition: all 0.4s ease-in-out;
-			-ms-transition: all 0.4s ease-in-out;
+			transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			-webkit-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;
 			&:hover {
 				color: $blue;
 			}
@@ -321,12 +317,12 @@ Menus
 		&:last-child { //volunteer link
 			border: 2px solid white;
 			text-transform: uppercase;
+			transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			-webkit-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;	
 			&:hover {
 				border: 2px solid $blue;
-				transition: all 0.4s ease-in-out;
-				-moz-transition: all 0.4s ease-in-out;
-				-webkit-transition: all 0.4s ease-in-out;
-				-ms-transition: all 0.4s ease-in-out;	
 			}
 		}
 		
@@ -354,16 +350,12 @@ Menus
 		font-size: 13px;
 		text-align: center;
 		border-bottom: 1px solid #dadada;
-		-webkit-transition: 0.2s ease-in-out;
-		-moz-transition: 0.2s ease-in-out;
-		-o-transition: 0.2s ease-in-out;
-		transition: 0.2s ease-in-out;
+		-webkit-transition: 0.3s ease-in-out;
+		-moz-transition: 0.3s ease-in-out;
+		-o-transition: 0.3s ease-in-out;
+		transition: 0.3s ease-in-out;
 		&:hover {
 			background: #f1f1f1;
-			-webkit-transition: 0.2s ease-in-out;
-			-moz-transition: 0.2s ease-in-out;
-			-o-transition: 0.2s ease-in-out;
-			transition: 0.2s ease-in-out;
 		}	
 	}
 	
@@ -483,10 +475,12 @@ Homepage
     	position: relative;
     	z-index: 3; //on top of img gradient
 	    color: $blue;
+	    text-transform: none;
     }
     
     h2 {
     	margin-top: 250px;
+    	line-height: 1;
 		font-family: $font-heading;
 		color: $blue;
     }
@@ -511,7 +505,7 @@ Homepage
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
-    background: $blue;
+    background: $darkgreen;
     
     .intro {
 	    background: transparent;
@@ -584,6 +578,7 @@ Homepage
 	}
 	
 	.date {
+		padding: 0;
 		color: $blue;
 		font-weight: 700;
 	}
@@ -721,31 +716,77 @@ Interior
     height: 100%;
     min-height: 190px;
     &:after {
-	    //responsive.scss for clip-path
+	    //above 768, add transform: scew after logo
 	}
 }
 
 body:not(.page-template-page-home) {
 	background: white;
+	.main-navigation li:last-child {
+		border-color: $darkgreen; 
+		&:hover {
+			border-color: $blue;	
+		}
+	}
+	
 }
+/*body.single {
+	.entry-content {
+		p {
+			padding: 10px 20px;
+		}
+	}
+}*/
 .entry-content {
 	background: $smoke;
 	margin-top: 0;
-	min-height: 800px;
-	padding: 60px 20px 40px;
-
-	.page-title {
-		color: $darkgreen;
-	}
+	padding: 60px 40px 40px;
 	
 	p {
 		padding: 10px 0;
 		color: $black;
 	}
-	p a,
-	a {
-		text-decoration: underline;
+
+	.page-title {
+		color: $darkgreen;
+		padding-bottom: 30px;
+		text-transform: none;
 	}
+	.news-title {
+		color: $blue;
+		text-decoration: none;
+		text-transform: none;
+		height: 20px;
+	}
+	a {
+		display: inline-block;
+		&:after { //left to right sliding underline for entry content links
+			content: '';
+			display: block;
+			height: 3px;
+			width: 0;
+			background-color: transparent;
+			transition: width 0.4s ease, background-color 0.4s ease;
+			-webkit-transition: width 0.4s ease, background-color 0.4s ease;
+			-moz-transition: width 0.4s ease, background-color 0.4s ease;
+			-ms-transition: width 0.4s ease, background-color 0.4s ease;
+		}
+		&:hover,&:focus,&:visited {
+			text-decoration: none;
+		}
+		&:hover:after {
+			width: 100%;
+			background-color: $blue;
+		}
+	}
+
+	
+	.date,
+	.descrip {
+		padding: 0;
+	}
+
+	
 }
 .hentry {
 	margin: 0;
@@ -766,25 +807,16 @@ Sidebar
 		color: white;
 		font-size: 1.25em;
 		text-transform: uppercase;
-		&:before {
-			content: '';
-			position: absolute;
-			margin-left: -40px;
-			color: $darkgreen;
-			-webkit-clip-path: polygon(0 50%, 100% 100%, 100% 0);
-			clip-path: polygon(0 50%, 100% 100%, 100% 0);
-			z-index: 9999;
-		}
 	}
 	
 	select,input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
     	margin: 10px 15px 0px 15px;
-    	width: 92%;
-	}	
-}
-
-aside {
-	li.cat-item {
+    	width: 90%;
+    	color: $blue;
+	}
+	aside {
+	li.cat-item,
+	ul li {
 	    a {
 	    	display: block;
 	        width: 100%;
@@ -802,8 +834,10 @@ aside {
 			position: absolute;
 			margin-left: 15px;
 		}
-    }
-}
+     }
+  }	//.aside
+  
+}//.sidebar
 
 .social-share {
 	margin-bottom: 30px;
@@ -866,7 +900,7 @@ Footer
 	font-weight: 400;
 }
 .footer-contact {
-	padding: 50px 0 80px;
+	padding: 80px 0;
 	text-align: center;
 	background: $blue;
 	color: white;
@@ -879,6 +913,7 @@ Footer
 		margin-bottom: 60px;
 	}
 	 .button {
+	 	width: 260px;
 		margin: 20px auto;
 	}
 

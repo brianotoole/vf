@@ -4,22 +4,13 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php vf_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php vf_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+<div class="col-sm-12 descrip">
+  <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">  
+    <h3 class="news-title animate fadeIn"><?php the_title(); ?></h3>
+  </a>
+  
+  <p class="date">
+    <?php echo get_the_date( 'l / F d / Y' ); ?>
+	  <?php the_excerpt() ?>
+  </p>  
+</div><!--/.col-->

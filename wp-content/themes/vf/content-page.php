@@ -8,7 +8,7 @@
 	<div class="entry-content">
 		<h2 class="page-title animate fadeIn"><?php the_title(); ?></h2>
 		
-		<?php the_content('<p>'); ?>
+		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'vf' ),
@@ -16,7 +16,7 @@
 			) );
 		?>
 		<?php if (is_page('news')) { ?>
-			<?php get_template_part( 'part', 'news' ); ?>
+			<?php get_template_part( 'content', 'news' ); ?>
 		<?php } else { ?>
 		<?php } ?>
 	</div><!-- .entry-content -->
