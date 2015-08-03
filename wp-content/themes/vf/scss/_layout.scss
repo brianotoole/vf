@@ -727,11 +727,18 @@ Interior
 
 body:not(.page-template-page-home) {
 	background: white;
+	.main-navigation li:last-child {
+		border-color: $darkgreen; 
+		&:hover {
+			border-color: $blue;
+		}
+	}
+	
 }
 .entry-content {
 	background: $smoke;
 	margin-top: 0;
-	min-height: 800px;
+	min-height: 990px;
 	padding: 60px 20px 40px;
 
 	.page-title {
@@ -767,25 +774,15 @@ Sidebar
 		color: white;
 		font-size: 1.25em;
 		text-transform: uppercase;
-		&:before {
-			content: '';
-			position: absolute;
-			margin-left: -40px;
-			color: $darkgreen;
-			-webkit-clip-path: polygon(0 50%, 100% 100%, 100% 0);
-			clip-path: polygon(0 50%, 100% 100%, 100% 0);
-			z-index: 9999;
-		}
 	}
 	
 	select,input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
     	margin: 10px 15px 0px 15px;
     	width: 90%;
-	}	
-}
-
-aside {
-	li.cat-item {
+	}
+	aside {
+	li.cat-item,
+	ul li {
 	    a {
 	    	display: block;
 	        width: 100%;
@@ -803,8 +800,10 @@ aside {
 			position: absolute;
 			margin-left: 15px;
 		}
-    }
-}
+     }
+  }	//.aside
+  
+}//.sidebar
 
 .social-share {
 	margin-bottom: 30px;

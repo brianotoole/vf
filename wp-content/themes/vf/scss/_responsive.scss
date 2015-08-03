@@ -48,18 +48,19 @@
 /* above .menu-toggle */
 @media screen and (min-width: 768px) {
 	.entry-header {
-		background-color: $blue;
+		background-color: white;
 	    &:after {
 	    	content: '';
 			position: absolute;
 			top: 0;
 			right: 0;
 			bottom: 0;
-			left: 0;
-			margin-left: 250px;
-			background-color: white;
-			-webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 16% 100%);
-			clip-path: polygon(22% 0, 100% 0, 100% 100%, 16% 100%);
+			left: -50px;
+			background: $blue;
+			width: 32%;
+			transform: skew(-25deg, 0);
+			-webkit-transform: skew(-25deg, 0);
+			-ms-transform: skewX(-25deg) skewY(0);
 	    }
 	}
 	body:not(.page-template-page-home) {
@@ -200,9 +201,24 @@ h6 { font-size: 16px; line-height: 20px; font-weight: 600; text-transform: upper
 			}
 		}
 	}
+	.sidebar {
+	  aside {
+	  li.cat-item,
+	     ul li {
+	       a {
+	          padding-bottom: 15px;
+	          margin: 15px 0;
+	          border-bottom: 1px solid $lightgray;
+	          &:hover, &:focus {
+			      text-decoration: none;
+			  }
+	       }
+       }
+	 }//.aside
+	}//.sidebar
 	
 	
-}
+}//end
 
 
 /* .menu-toggle */
