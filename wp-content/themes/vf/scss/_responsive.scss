@@ -47,6 +47,7 @@
 
 /* above .menu-toggle */
 @media screen and (min-width: 768px) {
+	.site-logo { margin-left: 30px; }
 	.entry-header {
 		background-color: white;
 	    &:after {
@@ -57,7 +58,7 @@
 			bottom: 0;
 			left: -50px;
 			background: $blue;
-			width: 32%;
+			width: 35%;
 			transform: skew(-25deg, 0);
 			-webkit-transform: skew(-25deg, 0);
 			-ms-transform: skewX(-25deg) skewY(0);
@@ -80,6 +81,7 @@
 		margin-top: 90px;
 	}
 	.entry-content {
+		min-height: 990px;
 		padding-right: 20px;
 	}
 	.hero {
@@ -181,6 +183,13 @@ h6 { font-size: 16px; line-height: 20px; font-weight: 600; text-transform: upper
 		}	
 	}
 	.squeeze-in > div {padding: 0;}
+	
+	.entry-content {
+		.page-title {
+			padding-left: 10px;
+			padding-bottom: 20px;
+		}
+	}
 
 	.events {
 		.pull-right {
@@ -208,7 +217,7 @@ h6 { font-size: 16px; line-height: 20px; font-weight: 600; text-transform: upper
 	       a {
 	          padding-bottom: 15px;
 	          margin: 15px 0;
-	          border-bottom: 1px solid $lightgray;
+	          border-bottom: 1px solid rgba($lightgray, 0.15);
 	          &:hover, &:focus {
 			      text-decoration: none;
 			  }
@@ -216,6 +225,10 @@ h6 { font-size: 16px; line-height: 20px; font-weight: 600; text-transform: upper
        }
 	 }//.aside
 	}//.sidebar
+	
+	.footer-contact .button {
+		width: 100%;
+	}
 	
 	
 }//end
