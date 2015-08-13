@@ -34,8 +34,8 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
 /* remove contact form 7 plugin scripts unless needed */
-//define('WPCF7_LOAD_JS', false);
-//define('WPCF7_LOAD_CSS', false);
+define('WPCF7_LOAD_JS', false);
+define('WPCF7_LOAD_CSS', false);
 
 /**#@+
  * Authentication Unique Keys and Salts.

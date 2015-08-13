@@ -101,12 +101,12 @@ function vf_scripts() {
 	wp_enqueue_style( 'sass', get_stylesheet_uri(), array(), '2.0.0');
 	
 
-	//show contact form 7 plugin scripts, only on contact & donate pages...
+	//show contact form 7 plugin scripts, only on certain pages...
 	
-	//if (is_page('contact') || is_page('donate')){
-     //   wpcf7_enqueue_scripts();
-     //   wpcf7_enqueue_styles();
-   // }
+	if (is_page('contact') || is_page('donate')){
+        wpcf7_enqueue_scripts();
+        wpcf7_enqueue_styles();
+    }
    
 	
 	//wp_enqueue_script('jquery');
