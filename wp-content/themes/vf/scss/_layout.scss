@@ -90,6 +90,7 @@ input[type="submit"] {
 
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="number"], input[type="search"], textarea {
 	background: #f4f4f4;
+	width: 100%;
 	&:focus {
 		background: white;
 		border-color: darken($gray,20%);
