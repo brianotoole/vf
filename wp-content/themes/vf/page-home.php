@@ -25,17 +25,17 @@ get_header(); ?>
 	<div class="intro row" id="contain">
 	  <h2 class="section-title">What We Do</h2> 
 		<div class="col-sm-4">
-			<img src="http://placeimg.com/150/150/any">
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/wwd_americorps.png">
 			<h3>Americorps</h3>
 			<p><?php the_field('home_wwd_left'); ?></p>
 		</div><hr class="visible-xs">
 		<div class="col-sm-4">
-			<img src="http://placeimg.com/150/150/any">
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/wwd_volunteers.png">
 			<h3>Florida<br />Volunteers</h3>
 			<p><?php the_field('home_wwd_middle'); ?></p>
 		</div><hr class="visible-xs">
 		<div class="col-sm-4">
-			<img src="http://placeimg.com/150/150/any">
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/wwd_mgt.png">
 			<h3>Emergency<br />Management</h3>
 			<p><?php the_field('home_wwd_right'); ?></p>
 		</div>
