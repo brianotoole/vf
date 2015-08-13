@@ -47,6 +47,7 @@
     <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
 		<h3>Menu</h3>  
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<button class="menu-toggle toggle-menu menu-right push-body"><?php _e( '<i class="fa fa-times"></i> Close Menu', 'vf' ); ?></button>
 	</nav>
 
 	<section id="content" class="site-content">
