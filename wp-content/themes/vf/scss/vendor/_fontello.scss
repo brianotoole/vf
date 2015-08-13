@@ -56,6 +56,6 @@
 
 .icon-doc:before { content: '\e800'; } 
 .icon-play:before { content: '\e801'; } 
-.icon-menu:before { content: '\e802'; } 
+.icon-menu:before { content: '\e802'; top: -3px; position: relative; vertical-align: middle; } 
 .icon-cancel-alt:before { content: '\e803'; } 
 .icon-cancel:before { content: '\e804'; }
