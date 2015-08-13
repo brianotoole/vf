@@ -271,6 +271,11 @@ Header & Navigation
 		float: left;
 		width: auto;
 		max-width: 230px;
+		
+		.site-logo {
+			width: 202px;
+			height: auto;
+		}
 	}
 	
 }
@@ -506,7 +511,9 @@ Homepage
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
-    background: $darkgreen;
+    background: url('img/florida_green.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     
     .intro {
 	    background: transparent;
