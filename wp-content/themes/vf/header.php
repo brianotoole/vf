@@ -18,7 +18,11 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'vf' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-    	<div class="grid head-overflow">
+		<?php if ( is_page( 'home' ) ) { //home page ?>
+    	  <div class="grid head-overflow-contain">
+    	<?php } else { // inteior page ?>
+    	  <div class="grid head-overflow">
+    	<?php } ?>
 			<div class="site-branding">
 				  
     				<div class="site-logo"> 
