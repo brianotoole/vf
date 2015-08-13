@@ -273,7 +273,7 @@ Header & Navigation
 		max-width: 230px;
 		
 		.site-logo {
-			width: 202px;
+			width: 250px;
 			height: auto;
 		}
 	}
@@ -904,17 +904,20 @@ Footer
 	font-weight: 400;
 }
 .footer-contact {
-	padding: 80px 0;
+	padding: 60px 0;
 	text-align: center;
-	background: $blue;
+	background: url('img/footer_bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
 	color: white;
-	
-	p, a {
+
+	p, a, h3 {
 		color: white;
+		text-transform: capitalize;
 	}
 	
 	img {
-		margin-bottom: 60px;
+		margin-bottom: 50px;
 	}
 	 .button {
 	 	width: 260px;
