@@ -153,6 +153,26 @@ input[type="submit"] {
 			border: 0;
 		}
 	}
+	.close {
+		margin: 0;
+		padding: 20px;
+		background: #111;
+		text-align: left;
+		
+	}
+	.cbp-spmenu-push-toleft .site-content  {
+		opacity: 0.55;
+		background: $black;
+		transition: opacity 0.2s;
+	}
+	.site-content {
+		opacity: 1;
+	}
+	.cbp-spmenu-push-toleft .fa-bars  {
+		&:before {
+			content: "\f00d";
+		}
+	}
 	.main-navigation ul {
 		display: none;
 	}

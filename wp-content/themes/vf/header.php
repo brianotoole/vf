@@ -46,8 +46,13 @@
     
     <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
 		<h3>Menu</h3>  
+		<div class="sb-search visible-xs">
+			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+				<input class="search-input" placeholder="SEARCH SITE..." type="text" value="" name="s" id="search">
+			</form>
+		</div><!--.sb-search-->
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		<button class="menu-toggle toggle-menu menu-right push-body"><?php _e( '<i class="fa fa-times"></i> Close Menu', 'vf' ); ?></button>
+		<button class="close menu-toggle toggle-menu menu-right push-body"><?php _e( '<i class="fa fa-times"></i> Close Menu', 'vf' ); ?></button>
 	</nav>
 
 	<section id="content" class="site-content">
