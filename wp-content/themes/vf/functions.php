@@ -65,14 +65,14 @@ endif; // vf_setup
 add_action( 'after_setup_theme', 'vf_setup' );
 
 /**
- * Load Google Fonts.
+ * Load Google Fonts. Fonts are loaded via style.scss file
  */
-function load_fonts() {
-            wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Oswald:200,300,400,700', array(), '2.0.0');
-            wp_enqueue_style( 'googleFonts');
-        }
+//function load_fonts() {
+ //           wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Oswald:200,300,400,700', array(), '2.0.0');
+ //           wp_enqueue_style( 'googleFonts');
+ //       }
     
-    add_action('wp_print_styles', 'load_fonts');
+ //   add_action('wp_print_styles', 'load_fonts');
 
 /**
  * Register widget area.
@@ -98,7 +98,7 @@ add_action( 'widgets_init', 'vf_widgets_init' );
  * Enqueue scripts and styles.
  */
 function vf_scripts() {
-	wp_enqueue_style( 'sass', get_stylesheet_uri(), array(), '2.0.0');
+	wp_enqueue_style( 'sass', get_stylesheet_uri(), null, null);
 	
 
 	//show contact form 7 plugin scripts, only on certain pages...

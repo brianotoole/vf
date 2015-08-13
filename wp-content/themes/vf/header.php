@@ -9,7 +9,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="theme-color" content="#219c75">
-<!--<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" type="image/ico">-->
+
+<!--<link rel="icon" sizes="any" mask href="//"> TO DO** -->
+<!--<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" type="image/ico"> TO DO 32x32-->
 <?php wp_head(); ?>
 </head>
 
@@ -53,7 +55,7 @@
 		<h3>Menu</h3>  
 		<div class="sb-search visible-xs">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-				<input class="search-input" placeholder="SEARCH SITE..." type="text" value="" name="s" id="search">
+				<input class="search-input" placeholder="Search Site..." type="text" value="" name="s" id="search">
 			</form>
 		</div><!--.sb-search-->
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
