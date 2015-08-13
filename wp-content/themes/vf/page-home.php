@@ -53,8 +53,7 @@ get_header(); ?>
 
 <section class="quotes">
 	<div class="intro row" id="contain">
-		<div class="col-sm-4 no-padding">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/quote.jpg">
+		<div class="left-img col-sm-4 no-padding">
 		</div>
 		<div class="col-sm-8">
 			<p>"<?php the_field('home_quote_text1'); ?>"</p>

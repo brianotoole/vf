@@ -630,8 +630,12 @@ Homepage
 	    background: transparent;
 	    color: white;
 	}
-	img {
-		height: 500px;
+	.left-img {
+		background: url('img/quote.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: -100px 0px;
+		height: 560px;
 	}
 	
 	p {
