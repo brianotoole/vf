@@ -216,26 +216,13 @@ jQuery(function($){
 		$('.toggle-menu').jPushMenu();
 	});
 	
-});
-
-
-
-/* scroll events nav 
-var nav = $('#masthead'),
-	NavTopPosition = nav.offset().top + 500;
- 
-$(window).on('scroll', function(){
+	//Click event to scroll to top
+	$('#top').click(function(){
+		$('html,body').animate({scrollTop : 0},600);
+		return false;
+	});
 	
-	if($(window).scrollTop() > NavTopPosition ) {
-		nav.addClass('is-fixed');	
-		setTimeout(function() {
-            navav.addClass('animate-children');
-        }, 50);
-	} else {
-		nav.removeClass('is-fixed');
-		setTimeout(function() {
-            nav.removeClass('animate-children');
-        }, 50);
-	}
 });
-*/
+
+	
+
