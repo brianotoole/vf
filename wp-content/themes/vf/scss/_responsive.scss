@@ -168,9 +168,10 @@ input[type="submit"] {
 	.site-content {
 		opacity: 1;
 	}
-	.cbp-spmenu-push-toleft .fa-bars  {
+	.cbp-spmenu-push-toleft .icon-menu  {
 		&:before {
-			content: "\f00d";
+			content: "\e804";
+			font-family: fontello;
 		}
 	}
 	.main-navigation ul {

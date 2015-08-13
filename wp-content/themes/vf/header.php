@@ -33,7 +33,7 @@
 	   	</div><!-- site-branding -->
 			<div class="navigation-container">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle toggle-menu menu-right push-body"><?php  _e( '<i class="fa fa-bars"></i> Menu', 'vf' ); ?></button>
+					<button class="menu-toggle toggle-menu menu-right push-body"><?php  _e( '<i class="icon-menu"></i> Menu', 'vf' ); ?></button>
 					<?php  wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</nav><!-- #site-navigation -->
         	</div><!-- navigation-container -->
@@ -48,6 +48,6 @@
 			</form>
 		</div><!--.sb-search-->
 		<?php  wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		<button class="close menu-toggle toggle-menu menu-right push-body"><?php  _e( '<i class="fa fa-times"></i> Close Menu', 'vf' ); ?></button>
+		<button class="close menu-toggle toggle-menu menu-right push-body"><?php  _e( '<i class="icon-cancel-alt"></i> Close Menu', 'vf' ); ?></button>
 	</nav>
 	<section id="content" class="site-content">
