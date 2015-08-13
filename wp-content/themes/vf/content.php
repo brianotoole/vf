@@ -11,7 +11,7 @@
   </a>
 	<p class="date">
 	  <?php echo get_the_date( 'l / F d / Y' ); ?>
-	  <?php the_excerpt() ?>
+	  <?php vf_excerpt('vf_excerpt_length','vf_view_more_news'); ?>
 	</p>  
 </div>
 
