@@ -657,12 +657,12 @@ Homepage
 		background: $smoke;
 		&:after {
 			content: '\e800';
-			font-family: 'fontello';
+			font-family: fontello;
 			position: relative;
 			font-size: 4em;
 			color: $lightgray;	
 			top: 65px;
-			left: 35px;
+			left: 37.5px;
 		}
 	}
 		
@@ -833,9 +833,14 @@ a.view {
 	font-size: 0.85em;
 	font-weight: 400;
 	text-decoration: none;
-	i {
+	&:after {
+		content: '\e801';
+		font-family: fontello;
+		font-size: 0.85em;
+		position: absolute;
 		color: $darkgreen;
 		padding-left: 5px;
+		margin-top: 2px;
 	}
 	&:hover {
 		text-decoration: none;

@@ -164,7 +164,7 @@ function vf_excerpt($length_callback = '', $more_callback = '')
 
 function vf_view_more_news($more){
 global $post;
-return '... <a class="view" href="' . get_permalink($post->ID) . '">' . __('Read More', 'vf') . '<i class="fa fa-caret-right"></i></a>';
+return '... <a class="view" href="' . get_permalink($post->ID) . '">' . __('Read More', 'vf') . '</a>';
 }
 
 /**
