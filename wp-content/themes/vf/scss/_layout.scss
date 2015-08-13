@@ -557,6 +557,13 @@ Homepage
 		    text-decoration: none;
 	    }
     }
+    a.view {
+    	font-size: 0.85em;
+	    i {
+		    color: $darkgreen;
+		    padding-left: 5px;
+	    }
+    }
     
     .intro {
 	    background: transparent;

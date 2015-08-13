@@ -142,8 +142,30 @@ function vf_excerpt_length( $length ) {
 
 }
 
-add_filter( 'excerpt_length', 'vf_excerpt_length', 75 ); 
+add_filter( 'excerpt_length', 'vf_excerpt_length', 55 ); 
 
+// Create Custom Excerpt callback
+function vf_excerpt($length_callback = '', $more_callback = '')
+{
+    global $post;
+    if (function_exists($length_callback)) {
+        add_filter('excerpt_length', $length_callback);
+    }
+    if (function_exists($more_callback)) {
+        add_filter('excerpt_more', $more_callback);
+    }
+    $output = get_the_excerpt();
+    $output = apply_filters('wptexturize', $output);
+    $output = apply_filters('convert_chars', $output);
+    $output = '<p>' . $output . '</p>';
+    echo $output;
+}
+
+
+function vf_view_more_news($more){
+global $post;
+return '... <a class="view" href="' . get_permalink($post->ID) . '">' . __('Read More', 'vf') . '<i class="fa fa-caret-right"></i></a>';
+}
 
 /**
  * Custom template tags for this theme.
