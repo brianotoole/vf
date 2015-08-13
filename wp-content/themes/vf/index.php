@@ -26,7 +26,7 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
-						<?php sensible_paging_nav(); ?> 
+						<?php vf_paging_nav(); ?> 
 
 				<?php else : ?>
 
