@@ -25,7 +25,7 @@
     		  <div class="site-logo"> 
        		      <a href='<?php  echo esc_url( home_url( '/' ) ); ?>' title='<?php  echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
        			<?php  if ( is_page( 'home' ) ) {//home page  ?>
-                 <img src='<?php  bloginfo('stylesheet_directory'); ?>/img/logo_home.svg'alt="<?php  echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="logo"></a> 
+                 <img src='<?php  bloginfo('stylesheet_directory'); ?>/img/logo_home.png'alt="<?php  echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="logo"></a> 
        			<?php  } else {// inteior page  ?>
 	   			  <img src='<?php  bloginfo('stylesheet_directory'); ?>/img/logo_interior.png'alt="<?php  echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="logo"></a> 
        			<?php  } ?>
@@ -48,6 +48,6 @@
 			</form>
 		</div><!--.sb-search-->
 		<?php  wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		<button class="close menu-toggle toggle-menu menu-right push-body"><?php  _e( '<i class="icon-cancel-alt"></i> Close Menu', 'vf' ); ?></button>
+		<button class="close menu-toggle toggle-menu menu-right push-body"><?php  _e( 'Close Menu', 'vf' ); ?></button>
 	</nav>
 	<section id="content" class="site-content">
