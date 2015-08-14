@@ -43,6 +43,9 @@
 			font-size: 0.9em;
 		}
 	}
+	.footer-contact {
+		background-position: 0 0;
+	}
 }//end
 
 /* special considerations */
@@ -165,7 +168,7 @@ input[type="submit"] {
 		padding: 10px 20px;
 		background: #111;
 		text-align: left;
-		color: $gray;
+		color: rgba(white, 0.75);
 		i {
 			position: relative;
 			color: rgba($gray, 0.75);
@@ -294,6 +297,12 @@ input[type="submit"] {
 	
 	.footer-contact .button {
 		width: 100%;
+	}
+	.site-footer {
+		a {
+			display: inline-block;
+			margin-top: 10px;
+		}
 	}
 	
 	
