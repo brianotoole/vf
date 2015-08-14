@@ -27,7 +27,7 @@
        			<?php  if ( is_page( 'home' ) ) {//home page  ?>
                  <img src='<?php  bloginfo('stylesheet_directory'); ?>/img/logo_home.png'alt="<?php  echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="logo"></a> 
        			<?php  } else {// inteior page  ?>
-	   			  <img src='<?php  bloginfo('stylesheet_directory'); ?>/img/logo_interior.png'alt="<?php  echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="logo"></a> 
+	   			  <img src='<?php  bloginfo('stylesheet_directory'); ?>/img/logo_interior.png' id="interior-logo" alt="<?php  echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="logo"></a> 
        			<?php  } ?>
 	   		</div><!-- site-logo -->
 	   	</div><!-- site-branding -->

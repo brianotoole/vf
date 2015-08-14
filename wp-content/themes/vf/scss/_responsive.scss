@@ -229,6 +229,7 @@ input[type="submit"] {
 	.entry-header {
 		height: 110px;
 		min-height: 110px;
+		border-bottom: 2px solid rgba($black, 0.1);
 	}
 	.entry-content {
 		padding: 60px 15px 40px;
