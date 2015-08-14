@@ -1,13 +1,16 @@
 // Colors
 
+//brand colors
 $blue: #0c436a;
 $darkgreen: #219c75; 
 $lightgreen: #73bd4a;
-$gray: #555;
-$lightgray: #ccc;
-$smoke: #ededed;
-$black: #333;
 $yellow: #FFED78;
+//light to dark
+$smoke: #ededed;
+$lightgray: #ccc;
+$gray: #555;
+$black: #333;
+//social media
 $twitter: #55acee;
 $facebook: #405d9a;
 $gplus: #dd4b39;
@@ -19,7 +22,7 @@ $font-body: Verdana, Helvetica , Arial;
 // Vendors
 @import "vendor/reset";
 @import "vendor/bootstrap.grid";
-@import "vendor/font-awesome";
+@import "vendor/fontello";
 
 // Layout
 @import "wp";

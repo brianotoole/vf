@@ -24,6 +24,11 @@
 		font-size: 1em;
 		padding: 5px 10px;
 	}
+	.entry-header {
+	    &:after {
+			width: 45%;
+		}
+	}
 	.news img .thumbnail, .news .thumbnail {
 		width: 100px;
 		height: 100px;
@@ -38,7 +43,11 @@
 			font-size: 0.9em;
 		}
 	}
+	.footer-contact {
+		background-position: 0 0;
+	}
 }//end
+
 /* special considerations */
 @media screen and (max-width: 899px) {
 	.main-navigation li a {
@@ -60,7 +69,7 @@
 			bottom: 0;
 			left: -50px;
 			background: $blue;
-			width: 35%;
+			width: 38%;
 			transform: skew(-25deg, 0);
 			-webkit-transform: skew(-25deg, 0);
 			-ms-transform: skewX(-25deg) skewY(0);
@@ -137,20 +146,58 @@ input[type="reset"],
 input[type="submit"] { 
 	display: block; width: 100%; 
 }
-	//nav
+	//nav toggle
 	.menu-toggle {
 		display: block;
-	}
-	.menu-toggle {
 		background: none;
 		border: none;
-		color: white;
-		margin: -12px 0;
-		padding: 35px 20px;
+		color: $black;
+		margin: -22px 0;
+		padding: 45px 5px;
 		&:hover, &:focus {
 			background: transparent;
-			color: white;
+			color: $black;
 			border: 0;
+		}
+		i {
+			color: $blue;
+		}
+	}
+	.close {
+		margin: 0;
+		padding: 10px 20px;
+		background: #111;
+		text-align: left;
+		color: rgba(white, 0.75);
+		i {
+			position: relative;
+			color: rgba($gray, 0.75);
+			top: -2px;
+		    font-size: 0.9em;
+		}
+		&:after {
+			content: '\e804';
+			font-family: fontello;
+			position: absolute;
+			right: 20px;
+			margin-top: 3px;
+			font-size: 0.8em;
+			color: rgba($gray, 0.75);
+		}
+		
+	}
+	.cbp-spmenu-push-toleft .site-content  {
+		opacity: 0.55;
+		background: $black;
+		transition: opacity 0.2s;
+	}
+	.site-content {
+		opacity: 1;
+	}
+	.cbp-spmenu-push-toleft .icon-menu  {
+		&:before {
+			content: "\e804";
+			font-family: fontello;
 		}
 	}
 	.main-navigation ul {
@@ -160,7 +207,10 @@ input[type="submit"] {
 		top: 22px;
 	}
 	
-	.site-logo img { max-width: 70%; }
+	.site-logo img {
+		 max-width: 95%; 
+		 margin: -10px 0px;
+	 }
 	
 	.hero {
 
@@ -169,7 +219,7 @@ input[type="submit"] {
 		}
 		.img {
 			height: 110px; //keep same dimension as #1
-			background: $blue!important;
+			background: white!important;
 		}
 		h2 {
 			margin-top: 110px; //keep same dimension as #1
@@ -179,6 +229,10 @@ input[type="submit"] {
 	.entry-header {
 		height: 110px;
 		min-height: 110px;
+		border-bottom: 2px solid rgba($black, 0.1);
+	}
+	.entry-content {
+		padding: 60px 15px 40px;
 	}
 	
 	.sec1 {
@@ -244,6 +298,12 @@ input[type="submit"] {
 	
 	.footer-contact .button {
 		width: 100%;
+	}
+	.site-footer {
+		a {
+			display: inline-block;
+			margin-top: 10px;
+		}
 	}
 	
 	

@@ -65,14 +65,14 @@ endif; // vf_setup
 add_action( 'after_setup_theme', 'vf_setup' );
 
 /**
- * Load Google Fonts.
+ * Load Google Fonts. Fonts are loaded via style.scss file
  */
-function load_fonts() {
-            wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Oswald:200,300,400,700', array(), '2.0.0');
-            wp_enqueue_style( 'googleFonts');
-        }
+//function load_fonts() {
+ //           wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Oswald:200,300,400,700', array(), '2.0.0');
+ //           wp_enqueue_style( 'googleFonts');
+ //       }
     
-    add_action('wp_print_styles', 'load_fonts');
+ //   add_action('wp_print_styles', 'load_fonts');
 
 /**
  * Register widget area.
@@ -98,15 +98,15 @@ add_action( 'widgets_init', 'vf_widgets_init' );
  * Enqueue scripts and styles.
  */
 function vf_scripts() {
-	wp_enqueue_style( 'sass', get_stylesheet_uri(), array(), '2.0.0');
+	wp_enqueue_style( 'sass', get_stylesheet_uri(), null, null);
 	
 
-	//show contact form 7 plugin scripts, only on contact & donate pages...
+	//show contact form 7 plugin scripts, only on certain pages...
 	
-	//if (is_page('contact') || is_page('donate')){
-     //   wpcf7_enqueue_scripts();
-     //   wpcf7_enqueue_styles();
-   // }
+	if (is_page('contact') || is_page('donate')){
+        wpcf7_enqueue_scripts();
+        wpcf7_enqueue_styles();
+    }
    
 	
 	//wp_enqueue_script('jquery');
@@ -142,8 +142,30 @@ function vf_excerpt_length( $length ) {
 
 }
 
-add_filter( 'excerpt_length', 'vf_excerpt_length', 75 ); 
+add_filter( 'excerpt_length', 'vf_excerpt_length', 55 ); 
 
+// Create Custom Excerpt callback
+function vf_excerpt($length_callback = '', $more_callback = '')
+{
+    global $post;
+    if (function_exists($length_callback)) {
+        add_filter('excerpt_length', $length_callback);
+    }
+    if (function_exists($more_callback)) {
+        add_filter('excerpt_more', $more_callback);
+    }
+    $output = get_the_excerpt();
+    $output = apply_filters('wptexturize', $output);
+    $output = apply_filters('convert_chars', $output);
+    $output = '<p>' . $output . '</p>';
+    echo $output;
+}
+
+
+function vf_view_more_news($more){
+global $post;
+return '... <a class="view" href="' . get_permalink($post->ID) . '">' . __('Read More', 'vf') . '</a>';
+}
 
 /**
  * Custom template tags for this theme.

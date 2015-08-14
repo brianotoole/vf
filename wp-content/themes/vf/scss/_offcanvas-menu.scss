@@ -2,6 +2,13 @@
 .cbp-spmenu {
 	background: #252525;
 	position: fixed;
+	input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
+		padding-left: 20px;
+		&:focus {
+			background: white;
+			color: $black;
+		}
+	}
 }
 
 .cbp-spmenu ul {
@@ -15,12 +22,13 @@
 }
 
 .cbp-spmenu h3 {
-	color: #fff;
+	color: rgba(white, 0.75);
 	font-size: 1.9em;
-	padding: 20px;
+	padding: 16px 20px;
 	margin: 0;
 	font-weight: 300;
 	background: #111;
+	text-transform: uppercase;
 }
 
 .cbp-spmenu a {
@@ -50,11 +58,20 @@
 }
 
 .cbp-spmenu-vertical a {
-	border-bottom: 1px solid $gray;
-	padding: 25px 20px;
+	border-bottom: 1px solid rgba($gray, 0.25);
+	padding: 10px 20px;
 	text-decoration: none;
 	&:hover, &:focus {
 		text-decoration: none;
+	}
+	&:after {
+		content: '\e801';
+		font-family: fontello;
+		position: absolute;
+		right: 20px;
+		margin-top: 7px;
+		font-size: 0.7em;
+		color: rgba($gray, 0.75);
 	}
 }
 
