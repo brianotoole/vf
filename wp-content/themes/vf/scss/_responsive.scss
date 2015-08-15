@@ -167,9 +167,10 @@ input[type="submit"] {
 	.close {
 		margin: 0;
 		padding: 10px 20px;
-		background: #111;
+		background: $blue;
 		text-align: left;
 		color: rgba(white, 0.75);
+		border-bottom: 1px solid rgba($gray, 0.25);
 		i {
 			position: relative;
 			color: rgba($gray, 0.75);
