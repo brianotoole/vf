@@ -2,6 +2,10 @@
 .cbp-spmenu {
 	background: #252525;
 	position: fixed;
+	form {
+		padding: 20px;
+		border-bottom: 1px solid rgba(85, 85, 85, 0.25);
+	}
 	input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
 		padding-left: 20px;
 		&:focus {
