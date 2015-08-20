@@ -1,16 +1,17 @@
 <?php
 /**
-Default interior pg
+Default interior pg (full-width)
  *
  */
 
 get_header(); ?> 
 
-   <header class="entry-header">
-   </header><!-- .entry-header -->
-    
+
+    <header class="entry-header">
+    </header><!-- .entry-header -->
+        
 	<div class="grid">
-		<div id="primary" class="col-1-1">
+		<div id="primary" class="content-area col-1-1">
 			<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -22,4 +23,5 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- grid -->
+
 <?php get_footer(); ?>
