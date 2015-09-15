@@ -1,6 +1,6 @@
 <?php
 /**
-Template Name: Page - Fullwidth
+Template Name: Page - Volunteer Centers
  * 
  */
 get_header(); ?> 
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'part', 'volunteer_centers' ); ?>
 				
 			<?php endwhile; // end of the loop. ?>
 
