@@ -88,11 +88,14 @@
 	.b-left {
 		border-left: 1px solid $gray;
 	}
-	#secondary {
+	.sidebar {
 		margin-top: 90px;
+		&.bottom {
+			margin: 0;
+		}
 	}
 	.entry-content {
-		min-height: 990px;
+		min-height: 800px;
 		padding-right: 20px;
 	}
 	.hero {
@@ -127,7 +130,12 @@
 		    padding-right: 30px;
 		}
 	}
-	#secondary { padding: 0 20px 0 0;}
+	.sidebar { 
+		padding: 0 20px 0 0;
+		&.bottom {
+			padding: 0;
+		}
+	}
 }
 
 
