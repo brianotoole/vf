@@ -830,15 +830,22 @@ Sidebar
 /*sidebar*/
 #secondary {
 	color: $black;
+	margin: 0;
+	padding: 20px 0px 10px;
 }
 .sidebar {
-
-	.widget-title {
+	.widget-title { //for page-sidebar template
 		padding: 10px 15px;
 		background: $darkgreen;
 		color: white;
 		font-size: 1.25em;
 		text-transform: uppercase;
+	}
+	
+	&.bottom { //for page-sidebar-bottom template
+		margin: 0;
+		background: white;
+		border-top: 1px solid $lightgray;
 	}
 	
 	select,input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
@@ -848,11 +855,16 @@ Sidebar
 	}
 	aside {
 	li.cat-item,
-	ul li {
+	.textwidget,
+	ul {
+		list-style: none;
+		margin: 0;
+		margin-left: 10px;
+	}
+	li {
 	    a {
-	    	display: block;
 	        width: 100%;
-	        padding: 1px 30px;
+	        padding: 1px 10px;
 	        font-size: 1em;
 	        text-align: left;
 	        text-decoration: none;
@@ -862,9 +874,13 @@ Sidebar
 			color: darken($blue,7%);
 		}
 		&:before {
-			content: url('img/arrow.png') 0 0 no-repeat;
-			position: absolute;
-			margin-left: 15px;
+			content: '\e801';
+			font-family: fontello;
+			font-size: 0.75em;
+			color: $darkgreen;
+			position: relative;
+			bottom: 2px;
+			padding-right: 5px;
 		}
      }
   }	//.aside
