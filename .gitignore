@@ -1,0 +1,6 @@
+#ignored files
+.htaccess
+.DS_Store
+style.css.map
+.sass-cache/
+wp-config.php

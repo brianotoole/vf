@@ -84,4 +84,21 @@ function() {
 		$('html,body').animate({scrollTop : 0},600);
 		return false;
 	});
-    
+//interior page logo, change when >= nav collapse screen size
+
+$(document).ready(function () {
+    logoChange();
+});
+
+$(window).resize(function() {
+    logoChange();
+});
+
+
+function logoChange() {
+	if($(window).width() <= 768){
+	  $('#interior-logo').attr('src','http://volunteerflorida.sachsdigital.com/wp-content/themes/vf/img/logo_home.png', '../wp-content/themes/vf/img/logo_interior.png');
+	} else {
+	  $('#interior-logo').attr('src','http://volunteerflorida.sachsdigital.com/wp-content/themes/vf/img/logo_interior.png', '../wp-content/themes/vf/img/logo_home.png');
+	}
+}

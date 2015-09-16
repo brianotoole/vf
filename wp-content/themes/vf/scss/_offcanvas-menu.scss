@@ -1,7 +1,12 @@
 /* General styles for all menus */
 .cbp-spmenu {
-	background: #252525;
+	background: $smoke;
+	box-shadow: 0 0 7px rgba($gray, 0.25);
 	position: fixed;
+	form {
+		padding: 20px;
+		border-bottom: 1px solid rgba(85, 85, 85, 0.25);
+	}
 	input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
 		padding-left: 20px;
 		&:focus {
@@ -22,30 +27,28 @@
 }
 
 .cbp-spmenu h3 {
-	color: rgba(white, 0.75);
+	display: none;
+	/*color: rgba(white, 0.75);
 	font-size: 1.9em;
 	padding: 16px 20px;
 	margin: 0;
 	font-weight: 300;
 	background: #111;
-	text-transform: uppercase;
+	text-transform: uppercase;*/
 }
 
 .cbp-spmenu a {
 	display: block;
-	color: #fff;
+	color: $blue;
+	font-family: $font-heading;
 	font-size: 1.1em;
-	font-weight: 300;
+	font-weight: 400;
+	&:hover, &:focus {
+		color: $blue;
+		background: darken($smoke,5%);
+	}
 }
 
-.cbp-spmenu a:hover {
-	background: #333;
-}
-
-.cbp-spmenu a:active {
-	background: #222;
-	color: #fff;
-}
 
 /* Orientation-dependent styles for the content of the menu */
 
@@ -71,7 +74,7 @@
 		right: 20px;
 		margin-top: 7px;
 		font-size: 0.7em;
-		color: rgba($gray, 0.75);
+		color: rgba($gray, 0.35);
 	}
 }
 

@@ -80,13 +80,5 @@ Template Name: Home
 		</div>
 	</div><!--/.intro-->
 </section><!--/.what-we-do-->
-<div class="footer-contact">
-	<div class="grid grid-pad row">
-		<div class="col-sm-12">
-		    <img src='<?php  bloginfo('stylesheet_directory'); ?>/img/logo_footer.png'alt="<?php  echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a> 
-			<h3>Together, We Can #ServeFL</h3>
-			<a class="button green" href="#">Get Started</a>
-		</div>
-	</div><!-- grid -->
-</div><!-- footer-contact -->
+
 <?php  get_footer(); ?>
