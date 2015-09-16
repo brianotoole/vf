@@ -718,7 +718,34 @@ Homepage
 /*--------------------------------------------------------------
 Interior
 --------------------------------------------------------------*/
-/* interior page header */
+//breadcrumb nav for interior pages
+.nav-breadcrumb {
+	width: 100%;
+	margin-bottom: 30px;
+	border-bottom: 1px solid $lightgray;
+	ul {
+		display: inline-block;
+		margin: 0;
+		list-style: none;
+		li {
+			float: left;
+			padding: 0 10px;
+			color: $blue;
+			font-size: 1.1em;
+			text-transform: uppercase;
+			&:before {
+				content: '\e801';
+				font-family: fontello;
+				font-size: 0.75em;
+				color: $darkgreen;
+				position: relative;
+				bottom: 2px;
+				padding-right: 5px;
+			}
+		}
+	}
+}
+//interior page header
 .entry-header {
 	position: relative;
 	background-color: white;
@@ -740,13 +767,7 @@ body:not(.page-template-page-home) {
 	}
 	
 }
-/*body.single {
-	.entry-content {
-		p {
-			padding: 10px 20px;
-		}
-	}
-}*/
+
 .entry-content {
 	background: $smoke;
 	margin-top: 0;
