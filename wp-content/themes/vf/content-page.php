@@ -6,6 +6,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
+		<div class="breadcrumb-nav">
+			<?php
+			$children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
+			  if ($children) { ?>
+			  <ul>
+			  <?php echo $children; ?>
+			  </ul>
+			<?php } ?>
+		</div>
 		<h2 class="page-title animate fadeIn"><?php the_title(); ?></h2>
 		
 		<?php the_content(); ?>
