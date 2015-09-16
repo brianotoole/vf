@@ -733,6 +733,9 @@ Interior
 			color: $blue;
 			font-size: 1.1em;
 			text-transform: uppercase;
+			&:first-child {
+				padding-left: 0;
+			}
 			&:before {
 				content: '\e801';
 				font-family: fontello;

@@ -10,7 +10,7 @@
 			<?php //if current page has children...
 			$children = get_pages('child_of='.$post->ID);
 			  if( count( $children ) != 0 ) { 
-			      $breadcrumbs = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
+			      $breadcrumbs = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0&sort_column=menu_order');
 				  echo '<div class="nav-breadcrumb"><ul>'.$breadcrumbs.'</ul></div>'; 
 			  }
 			  else { 
